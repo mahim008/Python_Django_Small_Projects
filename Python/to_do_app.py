@@ -2,7 +2,8 @@ def add_task(task_list):
     task = input("Enter a new task: ")
     task_list.append({"task": task, "completed": False})
     print("Task saved successfully!")
-    
+
+
 def display_tasks(task_list):
     if len(task_list) == 0:
         print("No tasks found.")
@@ -11,7 +12,8 @@ def display_tasks(task_list):
         for index, task in enumerate(task_list):
             status = "complete" if task["completed"] else "imcomplete"
             print(f"\n[{status}] --- {index}. {task['task']}\n")
-            
+
+
 def mark_completed(task_list):
     display_tasks(task_list)
     task_index = int(input("Enter the index of the task to mark as completed: "))
@@ -21,12 +23,15 @@ def mark_completed(task_list):
     else:
         print("Invalid task index, check again!")
 
+
 print("\nWelcome to Mahim's world best task manager!")
 tasks = []
 mahim_loves_python = True
 
 while mahim_loves_python:
-    print("The task menu for you is:\n\t1. Add a task\n\t2. Mark task as completed\n\t3. See existing tasks\n\t4. Exit the app")
+    print(
+        "The task menu for you is:\n\t1. Add a task\n\t2. Mark task as completed\n\t3. See existing tasks\n\t4. Exit "
+        "the app")
     choice = input("Enter your choice (1-4): ")
     if choice == "1":
         add_task(tasks)
@@ -39,5 +44,3 @@ while mahim_loves_python:
         break
     else:
         print("Invalid choice. Please try again.")
-
-
