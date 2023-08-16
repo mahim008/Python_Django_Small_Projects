@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="second.css">
+    <style>
+        .container{
+            text-align: center;
+            height: 100%;
+            width: 600px;
+            display: grid;
+            grid-template-columns: repeat(12, 0.5fr);
+            grid-template-rows: 80px 250px 75px 150px 75px 80px;
+            grid-gap: 10px;
+            grid-template-areas: 
+            "h h h h h h h h h h h h"
+            "i i i i i i i i hi hi hi ."
+            "i i i i i i i i ca ca ca ."
+            ". fe fe fe fe fe fe fe fe fe fe ."
+            ". m m m m m m m ca2 ca2 ca2 ."
+            "f f f f f f f f f f f f";
+        }
+        .header{
+            grid-area: h;
+        }
+        .intro{
+            grid-area: i;
+            grid-column: 2/9;
+        }
+        .hero{
+            grid-area: hi;
+        }
+        .action{
+            grid-area: ca;
+        }
+        .features{
+            grid-area: fe;
+        }
+        .mc{
+            grid-area: m;
+        }
+        .action2{
+            grid-area: ca2;
+        }
+        .footer{
+            grid-area: f;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="intro">Intro Copy</div>
+        <div class="hero">Hero Images</div>
+        <div class="action">Call to action</div>
+        <div class="features">Features</div>
+        <div class="mc">More copy</div>
+        <div class="action2">Call to action</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

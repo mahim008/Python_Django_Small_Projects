@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="first.css">
+    <style>
+        .container{
+            text-align: center;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 80px 80px 200px 200px 80px;
+            grid-gap: 20px;
+            grid-template-areas: 
+            "h h h h h h h h h h h h"
+            "n n n n n n n n n n n n"
+            "a a a a c c c c c c c c"
+            "a a a a s s s s s s s s"
+            "f f f f f f f f f f f f";
+        }
+        .header{
+            grid-area: h;
+        }
+        .navigation{
+            grid-area: n;
+        }
+        .aside{
+            grid-area: a;
+        }
+        .content{
+            grid-area: c;
+        }
+        .section{
+            grid-area: s;
+        }
+        .footer{
+            grid-area: f;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="header">Header</div>
+        <div class="navigation">Navigation</div>
+        <div class="aside">Aside</div>
+        <div class="content">Content</div>
+        <div class="section">Section</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
